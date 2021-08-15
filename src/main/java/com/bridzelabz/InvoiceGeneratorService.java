@@ -25,5 +25,16 @@ public class InvoiceGeneratorService {
 		
 		return totalFare;
 	}
+	
+	
+	public double CalculateFareforPremiumRides(double distance, int time, String category) {
+		double Fare = 0;
+		if(category.equals("Normal"))
+			Fare = (distance*10)+time*1;
+		else if(category.equals("Premium"))
+			Fare = (distance * 15) *2;
+		return Fare;
+		
+	}
 
 }
